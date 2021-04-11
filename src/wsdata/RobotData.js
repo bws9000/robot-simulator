@@ -8,7 +8,8 @@ export default class Robot {
     this.active = false;
     this.testRandom = Math.floor(Math.random() * 25);
     this.gridBlock = 0;
-    this.startPosition = {
+    this.bounds = 4;
+    this.Position = {
       x:0,
       y:0
     }
@@ -22,12 +23,13 @@ export default class Robot {
   sendString() {
     return this.message;
   }
-  sendObject() {
+  sendObjectToDisplay() {
     this.obj.active = this.active;
     this.obj.message = this.message;
     this.obj.activeArea = this.testRandom;
-    this.obj.startPosition = this.startPosition;
+    this.obj.Position = this.Position;
     this.obj.gridBlock = this.gridBlock;
+    this.obj.bounds = this.bounds;
     return JSON.stringify(this.obj);
   }
   

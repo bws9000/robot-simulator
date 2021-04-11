@@ -36,31 +36,35 @@
 
     <div class="container">
         <div class="coordinate-box">
-            <div id="00">[0,0]</div>
-            <div id="01">[0,1]</div>
-            <div id="02">[0,2]</div>
-            <div id="03">[0,3]</div>
             <div id="04">[0,4]</div>
-            <div id="10">[1,0]</div>
-            <div id="11">[1,1]</div>
-            <div id="12">[1,2]</div>
-            <div id="13">[1,3]</div>
             <div id="14">[1,4]</div>
-            <div id="20">[2,0]</div>
-            <div id="21">[2,1]</div>
-            <div id="22">[2,2]</div>
-            <div id="23">[2,3]</div>
             <div id="24">[2,4]</div>
-            <div id="30">[3,0]</div>
-            <div id="31">[3,1]</div>
-            <div id="32">[3,2]</div>
-            <div id="33">[3,3]</div>
             <div id="34">[3,4]</div>
-            <div id="40">[4,0]</div>
-            <div id="41">[4,1]</div>
-            <div id="42">[4,2]</div>
-            <div id="43">[4,3]</div>
             <div id="44">[4,4]</div>
+            
+            <div id="03">[0,3]</div>
+            <div id="13">[1,3]</div>
+            <div id="23">[2,3]</div>
+            <div id="33">[3,3]</div>
+            <div id="43">[4,3]</div>
+            
+            <div id="02">[0,2]</div>
+            <div id="12">[1,2]</div>
+            <div id="22">[2,2]</div>
+            <div id="32">[3,2]</div>
+            <div id="42">[4,2]</div>
+            
+            <div id="01">[0,1]</div>
+            <div id="11">[1,1]</div>
+            <div id="21">[2,1]</div>
+            <div id="31">[3,1]</div>
+            <div id="41">[4,1]</div>
+            
+            <div id="00">[0,0]</div>
+            <div id="10">[1,0]</div>
+            <div id="20">[2,0]</div>
+            <div id="30">[3,0]</div>
+            <div id="40">[4,0]</div>
         </div>
     </div>
 
@@ -95,13 +99,13 @@
         }
         function clear() {
             let x = -1;
-            let y = -1;
+            let y = 5;
             for (i = 0; i < 25; i++) {
-                if (i % 5 == 0) {
-                    x++;
-                    y = -1;
+                x++;
+                if(x % 5 === 0){
+                     x = 0;
+                     y--;
                 }
-                y++;
                 let coordinate = x + '' + y;
                 var elem = document.getElementById(coordinate);
                 elem.style.backgroundColor = "#8A2BE2";
@@ -115,14 +119,14 @@
             clear();
 
             if (robot.active) {
-                let x = robot.startPosition.x;
-                let y = robot.startPosition.y;
+                let x = robot.Position.x;
+                let y = robot.Position.y;
                 activateBlock(x, y);
             }
         };
         setInterval(() => {
             let msg = { message: 'give me data' };
-            ws.send(JSON.stringify(msg));
+            ws.send(JSON.stringify(msg)); //heartbeat
         }, 1000);
     </script>
 </body>
