@@ -1,0 +1,41 @@
+{
+  "name": "robot",
+  "version": "1.0.0",
+  "description": "Robot Simulation",
+  "main": "index.js",
+  "scripts": {
+    "rimraf": "./node_modules/rimraf/bin.js",
+    "build": "babel src -d dist",
+    "start": "npm run build && node dist",
+    "restart": "rimraf dist && npm run start",
+    "dev": "nodemon --exec npm run restart"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bws9000/robot-simulator.git"
+  },
+  "keywords": [
+    "robot",
+    "robonomics",
+    "simulator",
+    "node"
+  ],
+  "author": "Burt Snyder",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/bws9000/robot-simulator/issues"
+  },
+  "homepage": "https://github.com/bws9000/robot-simulator#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "websocket": "^1.0.33"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7",
+    "rimraf": "^3.0.2",
+    "rimraff": "0.0.1-security",
+    "@babel/cli": "^7.13.14",
+    "@babel/core": "^7.13.15",
+    "@babel/preset-env": "^7.13.15"
+  }
+}
