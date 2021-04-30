@@ -1,4 +1,4 @@
-# robot-simulator
+# Robot Simulator
 
 * npm install
 * npm run start
