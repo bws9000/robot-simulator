@@ -1,0 +1,28 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background-color: black;
+  color: #fff;
+}
+
+.coordinate-box {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+}
+
+.coordinate-box > div {
+  font-size: smaller;
+  padding: 1.5px;
+  width: 100px;
+  height: 100px;
+  color: black;
+  background-color: #8a2be2;
+  margin: 1.5px;
+}

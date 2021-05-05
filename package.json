@@ -31,11 +31,11 @@
     "websocket": "^1.0.33"
   },
   "devDependencies": {
-    "nodemon": "^2.0.7",
-    "rimraf": "^3.0.2",
-    "rimraff": "0.0.1-security",
     "@babel/cli": "^7.13.14",
     "@babel/core": "^7.13.15",
-    "@babel/preset-env": "^7.13.15"
+    "@babel/preset-env": "^7.13.15",
+    "nodemon": "^2.0.7",
+    "rimraf": "^3.0.2",
+    "rimraff": "0.0.1-security"
   }
 }
