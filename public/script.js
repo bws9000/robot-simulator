@@ -5,4 +5,3 @@ const client = new Client(
   new Display(document),
   true
 );
-//document.body.innerHTML = client.display.getGrid();
