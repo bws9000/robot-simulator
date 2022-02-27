@@ -1,7 +1,8 @@
-import Client from "./js/Client.js";
-import Display from "./js/Display.js";
-const client = new Client(
+import { Client1 } from "./js/Client/index.js";
+import { Grid1 } from "./js/Display/index.js";
+
+new Client1(
   new WebSocket("ws://localhost:9898/"),
-  new Display(document),
+  new Grid1(document),
   true
 );
