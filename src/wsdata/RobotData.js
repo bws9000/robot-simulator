@@ -10,11 +10,10 @@ export default class Robot {
     this.gridBlock = 0;
     this.bounds = 4;
     this.Position = {
-      x:0,
-      y:0
+      x: 0,
+      y: 0
     }
   }
-
 
   recieved(msg) {
     this.message = msg;
@@ -32,5 +31,5 @@ export default class Robot {
     this.obj.bounds = this.bounds;
     return JSON.stringify(this.obj);
   }
-  
+
 }
