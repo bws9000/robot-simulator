@@ -1,13 +1,13 @@
 class Grid1 {
 
-    constructor(document) {
-        this.document = document;
-        this.test = 0;
-        this.grid = this.updateDisplay();
-    }
+  constructor(document) {
+    this.document = document;
+    this.test = 0;
+    this.grid = this.updateDisplay();
+  }
 
-    updateDisplay() {
-        this.grid = `
+  updateDisplay() {
+    this.grid = `
       <div class="main">
       <div class="container">
           <div class="coordinate-box">
@@ -44,31 +44,31 @@ class Grid1 {
       </div>
       </div>
       `;
-        this.document.body.innerHTML = this.grid;
-    }
+    this.document.body.innerHTML = this.grid;
+  }
 
-    activateBlock(x, y) {
-        let coordinate = x + "" + y;
-        var elem = this.document.getElementById(coordinate);
-        elem.style.backgroundColor = "#9400D3";
-        elem.style.color = "#FFF";
-    }
+  activateBlock(x, y) {
+    const coordinate = x + '' + y;
+    const elem = this.document.getElementById(coordinate);
+    elem.style.backgroundColor = '#9400D3';
+    elem.style.color = '#FFF';
+  }
 
-    clear() {
-        let x = -1;
-        let y = 5;
-        for (let i = 0; i < 25; i++) {
-            x++;
-            if (x % 5 === 0) {
-                x = 0;
-                y--;
-            }
-            let coordinate = x + "" + y;
-            var elem = this.document.getElementById(coordinate);
-            elem.style.backgroundColor = "#8A2BE2";
-            elem.style.color = "#000";
-        }
+  clear() {
+    let x = -1;
+    let y = 5;
+    for (let i = 0; i < 25; i++) {
+      x++;
+      if (x % 5 === 0) {
+        x = 0;
+        y--;
+      }
+      const coordinate = x + '' + y;
+      const elem = this.document.getElementById(coordinate);
+      elem.style.backgroundColor = '#8A2BE2';
+      elem.style.color = '#000';
     }
+  }
 }
 
 export default Grid1;

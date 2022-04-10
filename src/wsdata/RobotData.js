@@ -1,5 +1,3 @@
-'use strict';
-
 export default class Robot {
 
   constructor() {
@@ -11,8 +9,8 @@ export default class Robot {
     this.bounds = 4;
     this.Position = {
       x: 0,
-      y: 0
-    }
+      y: 0,
+    };
   }
 
   recieved(msg) {
